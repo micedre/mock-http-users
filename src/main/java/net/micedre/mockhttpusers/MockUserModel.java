@@ -4,14 +4,21 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class MockUserModel {
 
+    private String id;
     private String firstName;
     private String username;
     private String lastName;
     private String email;
 
+    private String mood;
+
     private String password;
 
-    public String getFirstName() {
+    public MockUserModel(String string) {
+        this.id = string;
+    }
+
+	public String getFirstName() {
         return firstName;
     }
 
@@ -52,5 +59,20 @@ public class MockUserModel {
         this.password = password;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getMood() {
+        return mood;
+    }
+
+    public void setMood(String mood) {
+        this.mood = mood;
+    }
     
 }
